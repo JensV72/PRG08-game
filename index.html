@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Handpose Detection</title>
+    <link rel="stylesheet" href="./src/app.css"/>
+    <script type="module" src="/src/app.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+</head>
+<body>
+
+<nav>
+    <button id="webcamButton">START WEBCAM</button>
+    <button id="startButton">START GAME</button>
+    <div id="scoreDisplay">Score: 0</div>
+    <div id="lives">Lives: 5</div>
+    <button id="restart">Restart</button>
+</nav>
+
+
+<div class="info-box">
+    <p>🔵 Blue = hands open</p>
+    <p>🔴 Red = hands open</p>
+</div>
+
+<div class="videoView">
+    <video id="webcam" muted autoplay playsinline></video>
+    <canvas id="output_canvas"></canvas>
+</div>
+</body>
+</html>

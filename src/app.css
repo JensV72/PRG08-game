@@ -1,0 +1,104 @@
+/* Algemene opmaak voor het hele lichaam van de pagina */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    height: 100vh; /* Zorg ervoor dat de pagina de volledige hoogte van het scherm gebruikt */
+    display: flex;
+    flex-direction: column; /* Dit zorgt ervoor dat de elementen verticaal worden gestapeld */
+    background-color: #FFDBBB;
+}
+
+/* De navbar bovenaan de pagina */
+nav {
+    background-color: #496580;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#scoreDisplay{
+   font-size: 1em;
+    background-color: #ffffff;
+    color: #BADDFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: auto;
+}
+#lives{
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #BADDFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: auto;
+}
+#restart button{
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #BADDFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+#restart button:hover {
+    background-color: #496580;
+    color: white;
+}
+
+nav button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #BADDFF;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #496580;
+    color: white;
+}
+
+.videoView {
+    position: relative;
+    width: 67.1vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#webcam {
+    width: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de video het volledige canvas vult zonder te vervormen */
+    transform: rotateY(180deg); /* Flip de video als dat nodig is */
+    visibility: hidden;
+}
+
+#output_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(180deg); /* Flip de video als dat nodig is */
+    z-index: 1;
+    pointer-events: none; /* Zorgt ervoor dat het canvas niet in de weg zit voor de video */
+}
+
+.info-box {
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 8px;
+    z-index: 10;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
