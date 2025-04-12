@@ -36,9 +36,9 @@ let spawnIntervalBad;
 ml5.setBackend("webgl");
 const nn = ml5.neuralNetwork({task: 'classification', debug: true})
 const modelDetails = {
-    model: './models/model.json',
-    metadata: './models/model_meta.json',
-    weights: './models/model.weights.bin'
+    model: 'models/model.json',
+    metadata: 'models/model_meta.json',
+    weights: 'models/model.weights.bin'
 }
 
 async function loadModel() {
