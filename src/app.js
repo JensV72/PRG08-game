@@ -23,7 +23,7 @@ let results = undefined;
 let objectsBlue = [];
 let objectsRed = [];
 let score = 0;
-let livesCount = 5;
+let livesCount = 200;
 let currentPrediction = "";
 let currentPrediction1 = "";
 let gameStarted = false;
@@ -279,6 +279,7 @@ async function classifyCurrentHand(hand,hand1) {
     const flatArray = hand.flatMap(point => [point.x, point.y, point.z]);
     const results = await nn.classify(flatArray)
     if (results && results.length > 0) {
+        console.log(results)
         currentPrediction = results[0].label; // Neem de eerste voorspelling (deze is meestal de meest waarschijnlijke)
         console.log("Predicted label:", currentPrediction);
     }

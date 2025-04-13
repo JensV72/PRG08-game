@@ -7,6 +7,6 @@ export default defineConfig({
 
     build: {
         outDir: 'docs',
-        emptyOutDir: true, // empty the build dir before new build
+        emptyOutDir: true,
     }
 });
